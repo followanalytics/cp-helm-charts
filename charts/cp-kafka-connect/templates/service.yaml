@@ -11,6 +11,7 @@ spec:
   ports:
     - name: kafka-connect
       port: {{ .Values.servicePort }}
+  type: NodePort
   selector:
     app: {{ template "cp-kafka-connect.name" . }}
     release: {{ .Release.Name }}
